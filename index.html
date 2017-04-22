@@ -9,13 +9,110 @@
 </head>
 <body>
 
+	<div id = "wrapper">
 
+			<h1 id="title"> Too Trivial<br>Trivia Game </h1>
+			<br>
+				<h4 id ="timer">Race against time: 30</h4>
+
+			<br>
+						<img src="assets/images/traffic.gif">
+
+				<br>
+				<br>
+				<div class="checkbox">
+					<h5 class = "question">Vin Diesel accidentally broke who's nose in the first Fast and Furious?</h5>
+  					<label><input type="checkbox" value="">Paul Walker</label>
+  					<label><input type="checkbox" value="">Michelle Rodriguez </label>
+  					<label><input type="checkbox" value="">A stuntman</label>
+  					<label><input type="checkbox" value="">He broke all the noses</label>
+
+				</div>
+<br>
+
+				<div class="checkbox">
+					<h5 class = "question">What did people call the Rock when he was young?</h5>
+  					<label><input type="checkbox" value="">The Pebble</label>
+  					<label><input type="checkbox" value="">The Stone</label>
+  					<label><input type="checkbox" value="">It's the Rock, you wanna die?</label>
+  					<label><input type="checkbox" value="">Baby Rock</label>
+
+				</div>
+
+<br>
+
+				<div class="checkbox">
+					<h5 class = "question">Where does Michelle R. born?</h5>
+  					<label><input type="checkbox" value="">Texas</label>
+  					<label><input type="checkbox" value="">Earth duh!</label>
+  					<label><input type="checkbox" value="">Alaska</label>
+  					<label><input type="checkbox" value="">Spain</label>
+
+				</div>
+
+<br>
+
+				<div class="checkbox">
+					<h5 class = "question">What's Paul Walker bother's name?</h5>
+  					<label><input type="checkbox" value="">Cody</label>
+  					<label><input type="checkbox" value="">Paul</label>
+  					<label><input type="checkbox" value="">He has a bother?</label>
+  					<label><input type="checkbox" value="">Ed</label>
+
+				</div>
+
+<br>
+				<div class="checkbox">
+					<h5 class = "question">How many cars are in Fast and Furious?</h5>
+  					<label><input type="checkbox" value="">Over 200</label>
+  					<label><input type="checkbox" value="">No car, they're all fake</label>
+  					<label><input type="checkbox" value="">Why do you care?</label>
+  					<label><input type="checkbox" value="">Under 1000</label>
+
+				</div>
+<br>
+				<button id ="submit-button">SUBMIT</button>
+
+	</div>
 
 
 
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript">
 	
+// The player will have a limited amount of time to finish the quiz.
+// The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
+// Don't let the player pick more than one answer per question.
+// Don't forget to include a countdown timer.
+
+
+
+var timer = 30;
+var setTimer;
+
+start();
+
+function start(){
+		    setTimer= setInterval(function(){ 
+				timer-- ;
+				$("#timer").html("Race against time: " + timer);
+			}, 1000);
+				
+				// if (timer === 0 ){
+				// 	clearInterval(setTimer);
+				// 	alert("Hey");
+				// }
+
+
+
+};
+
+
+
+function stop(){
+	clearInterval(setTimer);
+}
+
 
 
 
