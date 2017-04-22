@@ -13,66 +13,78 @@
 
 			<h1 id="title"> Too Trivial<br>Trivia Game </h1>
 			<br>
-				<h4 id ="timer">Race against time: 30</h4>
+					<div id ="question">
 
-			<br>
-						<img src="assets/images/traffic.gif">
+						<h4 id ="timer">Race against time: 30</h4>
 
-				<br>
-				<br>
-				<div class="checkbox">
-					<h5 class = "question">Vin Diesel accidentally broke who's nose in the first Fast and Furious?</h5>
-  					<label><input type="checkbox" value="">Paul Walker</label>
-  					<label><input type="checkbox" value="">Michelle Rodriguez </label>
-  					<label><input type="checkbox" value="">A stuntman</label>
-  					<label><input type="checkbox" value="">He broke all the noses</label>
+					<br>
+								<img src="assets/images/traffic.gif">
 
+						<br>
+						<br>
+						<div class="checkbox">
+							<h5 class = "question">Vin Diesel accidentally broke who's nose in the first Fast and Furious?</h5>
+		  					<label><input type="checkbox" value="">Paul Walker</label>
+		  					<label><input type="checkbox" value="">Michelle Rodriguez </label>
+		  					<label><input type="checkbox" value="">A stuntman</label>
+		  					<label><input type="checkbox" value="">He broke all the noses</label>
+
+						</div>
+		<br>
+
+						<div class="checkbox">
+							<h5 class = "question">What did people call the Rock when he was young?</h5>
+		  					<label><input type="checkbox" value="">The Pebble</label>
+		  					<label><input type="checkbox" value="">The Stone</label>
+		  					<label><input type="checkbox" value="">It's the Rock, you wanna die?</label>
+		  					<label><input type="checkbox" value="">Baby Rock</label>
+
+						</div>
+
+		<br>
+
+						<div class="checkbox">
+							<h5 class = "question">Where does Michelle R. born?</h5>
+		  					<label><input type="checkbox" value="">Texas</label>
+		  					<label><input type="checkbox" value="">Earth duh!</label>
+		  					<label><input type="checkbox" value="">Alaska</label>
+		  					<label><input type="checkbox" value="">Spain</label>
+
+						</div>
+
+		<br>
+
+						<div class="checkbox">
+							<h5 class = "question">What's Paul Walker bother's name?</h5>
+		  					<label><input type="checkbox" value="">Cody</label>
+		  					<label><input type="checkbox" value="">Paul</label>
+		  					<label><input type="checkbox" value="">He has a bother?</label>
+		  					<label><input type="checkbox" value="">Ed</label>
+
+						</div>
+
+		<br>
+						<div class="checkbox">
+							<h5 class = "question">How many cars are in Fast and Furious?</h5>
+		  					<label><input type="checkbox" value="">Over 200</label>
+		  					<label><input type="checkbox" value="">No car, they're all fake</label>
+		  					<label><input type="checkbox" value="">Why do you care?</label>
+		  					<label><input type="checkbox" value="">Under 1000</label>
+
+						</div>
+		<br>
+						<button id ="submit-button">SUBMIT</button>
 				</div>
-<br>
 
-				<div class="checkbox">
-					<h5 class = "question">What did people call the Rock when he was young?</h5>
-  					<label><input type="checkbox" value="">The Pebble</label>
-  					<label><input type="checkbox" value="">The Stone</label>
-  					<label><input type="checkbox" value="">It's the Rock, you wanna die?</label>
-  					<label><input type="checkbox" value="">Baby Rock</label>
 
+
+				<div id = "game-over">
+						<h1> You got <span id ="right">XXX</span> right<br>&
+						<span id ="wrong"> XXX</span> Wrong </h1>
+					<br>
+						<img src="assets/images/thanks.gif">
+						<h2> Thanks For Playing</h2>
 				</div>
-
-<br>
-
-				<div class="checkbox">
-					<h5 class = "question">Where does Michelle R. born?</h5>
-  					<label><input type="checkbox" value="">Texas</label>
-  					<label><input type="checkbox" value="">Earth duh!</label>
-  					<label><input type="checkbox" value="">Alaska</label>
-  					<label><input type="checkbox" value="">Spain</label>
-
-				</div>
-
-<br>
-
-				<div class="checkbox">
-					<h5 class = "question">What's Paul Walker bother's name?</h5>
-  					<label><input type="checkbox" value="">Cody</label>
-  					<label><input type="checkbox" value="">Paul</label>
-  					<label><input type="checkbox" value="">He has a bother?</label>
-  					<label><input type="checkbox" value="">Ed</label>
-
-				</div>
-
-<br>
-				<div class="checkbox">
-					<h5 class = "question">How many cars are in Fast and Furious?</h5>
-  					<label><input type="checkbox" value="">Over 200</label>
-  					<label><input type="checkbox" value="">No car, they're all fake</label>
-  					<label><input type="checkbox" value="">Why do you care?</label>
-  					<label><input type="checkbox" value="">Under 1000</label>
-
-				</div>
-<br>
-				<button id ="submit-button">SUBMIT</button>
-
 	</div>
 
 
@@ -84,38 +96,43 @@
 // The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
 // Don't let the player pick more than one answer per question.
 // Don't forget to include a countdown timer.
+$(document).ready(){
 
 
-
-var timer = 30;
+var timer = 10;
 var setTimer;
 
+$("#game-over").hide();
 start();
 
 function start(){
 		    setTimer= setInterval(function(){ 
 				timer-- ;
 				$("#timer").html("Race against time: " + timer);
+				
+				if (timer ===0 ){
+					stop();
+					alert("Time's Up");
+					$("#question").hide();
+					$("#game-over").show();
+
+				}
 			}, 1000);
 				
-				// if (timer === 0 ){
-				// 	clearInterval(setTimer);
-				// 	alert("Hey");
-				// }
-
-
-
 };
 
 
 
 function stop(){
 	clearInterval(setTimer);
-}
+};
 
 
 
 
+
+
+};
 
 
 </script>
