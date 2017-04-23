@@ -1,140 +1,257 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Totally Trivial Trivia</title>
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Rubik+Mono+One" rel="stylesheet">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" href="assets/css/style.css">
+    <title>Totally Trivial Trivia</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Rubik+Mono+One" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
-	<div id = "wrapper">
+<div id = "wrapper">
 
-			<h1 id="title"> Too Trivial<br>Trivia Game </h1>
-			<br>
-					<div id ="question">
+    <h1 id="title"> Too Trivial<br>Trivia Game </h1>
+    <br>
+    <div id ="question">
 
-						<h4 id ="timer">Race against time: 30</h4>
+        <h4 id ="timer">Race against time: 30</h4>
 
-					<br>
-								<img src="assets/images/traffic.gif">
+        <br>
+        <img src="assets/images/traffic.gif">
 
-						<br>
-						<br>
-						<div class="checkbox">
-							<h5 class = "question">Vin Diesel accidentally broke who's nose in the first Fast and Furious?</h5>
-		  					<label><input type="checkbox" value="">Paul Walker</label>
-		  					<label><input type="checkbox" value="">Michelle Rodriguez </label>
-		  					<label><input type="checkbox" value="">A stuntman</label>
-		  					<label><input type="checkbox" value="">He broke all the noses</label>
+        <br>
+        <br>
+        <form>
+            <div class="radio" id = "quest1">
+                <h5 class = "question">Vin Diesel accidentally broke who's nose in the first Fast and Furious?</h5>
+                <label><input type="radio" name="optradio1" value="a">Paul Walker</label>
+                <label><input type="radio" name="optradio1" value="b">Michelle Rodriguez </label>
+                <label><input type="radio" name="optradio1" value="c">A stuntman</label>
+                <label><input type="radio" name="optradio1" value="d">He broke all the noses</label>
 
-						</div>
-		<br>
+            </div>
+            <br>
 
-						<div class="checkbox">
-							<h5 class = "question">What did people call the Rock when he was young?</h5>
-		  					<label><input type="checkbox" value="">The Pebble</label>
-		  					<label><input type="checkbox" value="">The Stone</label>
-		  					<label><input type="checkbox" value="">It's the Rock, you wanna die?</label>
-		  					<label><input type="checkbox" value="">Baby Rock</label>
+            <div class="radio" id = "quest2">
+                <h5 class = "question">What did people call the Rock when he was young?</h5>
+                <label><input type="radio" name="optradio2" value="a">The Pebble</label>
+                <label><input type="radio" name="optradio2" value="b">The Stone</label>
+                <label><input type="radio" name="optradio2" value="c">It's the Rock, you wanna die?</label>
+                <label><input type="radio" name="optradio2" value="d">Baby Rock</label>
 
-						</div>
+            </div>
 
-		<br>
+            <br>
 
-						<div class="checkbox">
-							<h5 class = "question">Where does Michelle R. born?</h5>
-		  					<label><input type="checkbox" value="">Texas</label>
-		  					<label><input type="checkbox" value="">Earth duh!</label>
-		  					<label><input type="checkbox" value="">Alaska</label>
-		  					<label><input type="checkbox" value="">Spain</label>
+            <div class="radio" id = "quest3">
+                <h5 class = "question">Where does Michelle R. born?</h5>
+                <label><input type="radio" name="optradio3" value="a">Texas</label>
+                <label><input type="radio" name="optradio3" value="b">Earth duh!</label>
+                <label><input type="radio" name="optradio3" value="c">Alaska</label>
+                <label><input type="radio" name="optradio3" value="d">Spain</label>
 
-						</div>
+            </div>
 
-		<br>
+            <br>
 
-						<div class="checkbox">
-							<h5 class = "question">What's Paul Walker bother's name?</h5>
-		  					<label><input type="checkbox" value="">Cody</label>
-		  					<label><input type="checkbox" value="">Paul</label>
-		  					<label><input type="checkbox" value="">He has a bother?</label>
-		  					<label><input type="checkbox" value="">Ed</label>
+            <div class="radio" id = "quest4">
+                <h5 class = "question">What's Paul Walker bother's name?</h5>
+                <label><input type="radio" name="optradio4" value="a">Cody</label>
+                <label><input type="radio" name="optradio4" value="b">Paul</label>
+                <label><input type="radio" name="optradio4" value="c">He has a bother?</label>
+                <label><input type="radio" name="optradio4" value="d">Ed</label>
 
-						</div>
+            </div>
 
-		<br>
-						<div class="checkbox">
-							<h5 class = "question">How many cars are in Fast and Furious?</h5>
-		  					<label><input type="checkbox" value="">Over 200</label>
-		  					<label><input type="checkbox" value="">No car, they're all fake</label>
-		  					<label><input type="checkbox" value="">Why do you care?</label>
-		  					<label><input type="checkbox" value="">Under 1000</label>
+            <br>
+            <div class="radio" id = "quest5">
+                <h5 class = "question">How many cars are in Fast and Furious?</h5>
+                <label><input type="radio" name="optradio5" value="a">Over 200</label>
+                <label><input type="radio" name="optradio5" value="b">No car, they're all fake</label>
+                <label><input type="radio" name="optradio5" value="c">Why do you care?</label>
+                <label><input type="radio" name="optradio5" value="d">Over 9000</label>
 
-						</div>
-		<br>
-						<button id ="submit-button">SUBMIT</button>
-				</div>
+            </div>
+            <br>
+            <button id ="submit-button">SUBMIT</button>
+    </div>
+
+    </form>
 
 
 
-				<div id = "game-over">
-						<h1> You got <span id ="right">XXX</span> right<br>&
-						<span id ="wrong"> XXX</span> Wrong </h1>
-					<br>
-						<img src="assets/images/thanks.gif">
-						<h2> Thanks For Playing</h2>
-				</div>
-	</div>
+    <div id = "game-over">
+        <h1> You got <span id ="right">XXX</span> right<br>&
+            <span id ="wrong">XXX</span> Wrong </h1>
+        <br>
+        <img src="assets/images/thanks.gif">
+        <h2> Thanks For Playing</h2>
+    </div>
+</div>
 
 
 
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script type="text/javascript">
-	
-// The player will have a limited amount of time to finish the quiz.
-// The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly.
-// Don't let the player pick more than one answer per question.
-// Don't forget to include a countdown timer.
-$(document).ready(){
-
-
-var timer = 10;
-var setTimer;
-
-$("#game-over").hide();
-start();
-
-function start(){
-		    setTimer= setInterval(function(){ 
-				timer-- ;
-				$("#timer").html("Race against time: " + timer);
-				
-				if (timer ===0 ){
-					stop();
-					alert("Time's Up");
-					$("#question").hide();
-					$("#game-over").show();
-
-				}
-			}, 1000);
-				
-};
-
-
-
-function stop(){
-	clearInterval(setTimer);
-};
+    $(document).ready(function(){
 
 
 
 
 
 
-};
+        var timer = 10;
+        var setTimer;
+
+        var wrong = $("#wrong");
+        var right = $("#right");
+
+        var rightCount = 0;
+        var wrongCount = 0;
+        var unAnswer = 0;
+
+        var userChoice = $(".input:checked").val();
+
+        $("#game-over").hide();
+        start();
+
+        function start(){
+            setTimer = setInterval(function(){
+                timer-- ;
+                $("#timer").html("Race against time: " + timer);
 
 
+
+                if (timer ===0 ){
+                    stop();
+                    alert("Time's Up");
+                    $("#question").hide();
+                    $("#game-over").show();
+
+                }
+            }, 1000);
+
+        };
+
+
+        $("#form").submit(function(e){
+            e.preventDefault();
+        });
+
+        function stop(){
+            clearInterval(setTimer);
+        };
+
+
+        $("#submit-button").on('click', function(event){
+            event.preventDefault();
+            stop();
+            alert("Time's Up");
+            $("#question").hide();
+            $("#game-over").show();
+            answerCheck1();
+            answerCheck2();
+            answerCheck3();
+            answerCheck4();
+            answerCheck5();
+        });
+
+
+
+        function answerCheck1(){
+
+            var userChoice = $('input[name=optradio1]:checked').val();
+            console.log(userChoice);
+            if(userChoice === "c"){
+                alert("you got it right mang")
+                rightCount++;
+                right.html(rightCount);
+
+            }
+
+            else{
+          		 alert("ughhh...WRONG!")
+                wrongCount++;
+                wrong.html(wrongCount);
+            }
+    };
+
+    function answerCheck2(){
+        	
+            var userChoice = $('input[name=optradio2]:checked').val();
+            console.log(userChoice);
+            if(userChoice === "c"){
+                alert("you got it right mang")
+                rightCount++;
+                right.html(rightCount);
+
+            }
+
+            else{
+            	alert("ughhh...WRONG!")
+                wrongCount++;
+                wrong.html(wrongCount);
+            }
+    };
+
+    function answerCheck3(){
+        	
+            var userChoice = $('input[name=optradio]:checked').val();
+            console.log(userChoice);
+            if(userChoice === "a"){
+                alert("you got it right mang")
+                rightCount++;
+                right.html(rightCount);
+
+            }
+
+            else{
+            	alert("ughhh...WRONG!")
+                wrongCount++;
+                wrong.html(wrongCount);
+            }
+    };
+
+    function answerCheck4(){
+        	
+            var userChoice = $('input[name=optradio4]:checked').val();
+            console.log(userChoice);
+            if(userChoice === "a"){
+                alert("you got it right mang")
+                rightCount++;
+                right.html(rightCount);
+
+            }
+
+            else{
+            	alert("ughhh...WRONG!")
+                wrongCount++;
+                wrong.html(wrongCount);
+            }
+    };
+
+    function answerCheck5(){
+        	
+            var userChoice = $('input[name=optradio5]:checked').val();
+            console.log(userChoice);
+            if(userChoice === "d"){
+                alert("you got it right mang")
+                rightCount++;
+                right.html(rightCount);
+
+            }
+
+            else{
+            	alert("ughhh...WRONG!")
+                wrongCount++;
+                wrong.html(wrongCount);
+            }
+    };
+
+
+
+    });
 </script>
 
 </body>
