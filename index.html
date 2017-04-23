@@ -82,8 +82,9 @@
 
 
     <div id = "game-over">
-        <h1> You got <span id ="right">XXX</span> right<br>&
-            <span id ="wrong">XXX</span> Wrong </h1>
+        <h1> You got <span id ="right">0</span> right<br>&
+            <span id ="wrong">0</span> Wrong </h1>
+        <h1> You Left <span id ="no-answer">0</span>Empty</h1>
         <br>
         <img src="assets/images/thanks.gif">
         <h2> Thanks For Playing</h2>
@@ -101,11 +102,12 @@
 
 
 
-        var timer = 10;
+        var timer = 30;
         var setTimer;
 
         var wrong = $("#wrong");
         var right = $("#right");
+        var noAnswer = $("#no-answer");
 
         var rightCount = 0;
         var wrongCount = 0;
@@ -128,6 +130,11 @@
                     alert("Time's Up");
                     $("#question").hide();
                     $("#game-over").show();
+                    answerCheck1();
+            		answerCheck2();
+            		answerCheck3();
+            		answerCheck4();
+            		answerCheck5();
 
                 }
             }, 1000);
@@ -159,6 +166,8 @@
 
 
 
+// Shoul
+
         function answerCheck1(){
 
             var userChoice = $('input[name=optradio1]:checked').val();
@@ -169,6 +178,8 @@
                 right.html(rightCount);
 
             }
+
+            
 
             else{
           		 alert("ughhh...WRONG!")
